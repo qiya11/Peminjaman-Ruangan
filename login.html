@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin | Log in</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- icheck bootstrap -->
+  <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+</head>
+<body class="hold-transition login-page bg-lightblue">
+<div class="login-box">
+  <div class="login-logo bg-navy">
+    <a href="index.html"><b>LOGIN</b></a>
+  </div>
+  <!-- /.login-logo -->
+  <div class="card">
+    <div class="card-body login-card-body bg-navy">
+      <p class="login-box-msg">Sign in to start your session</p>
+
+        <div class="input-group mb-3" id="username">
+          <input type="text" class="form-control" placeholder="Username" id="usr">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-user"></span>
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3" id="password">
+          <input type="password" class="form-control" placeholder="Password" id="pas">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-lock bg"></span>
+            </div>
+          </div>
+        </div>
+        
+      <p class="mb-0">
+        <a href="register.html" class="text-center">Registrasi User</a>
+      </p>
+          <div>
+            <button type="button" class="btn btn-primary btn-block bg-black" onclick="login()">Sign In</button>
+          </div>
+          <!-- /.col -->
+        </div>
+
+    </div>
+    <!-- /.login-card-body -->
+  </div>
+</div>
+<!-- /.login-box -->
+
+<script>
+  function login(){
+      let uname = document.getElementById("usr").value
+      let pass = document.getElementById("pas").value
+
+      if(uname == "admin" && pass == "ruangan123"){
+          alert("Login Berhasil! WELCOMEEE");
+          location.href = "admin/daftar_ruangan.html"
+      
+      }else {
+          alert("Yah gagal, silahkan coba lagi!");
+          location.href = "#"
+      }
+  }
+</script>
+
+<!-- jQuery -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.min.js"></script>
+
+
+</body>
+</html>
